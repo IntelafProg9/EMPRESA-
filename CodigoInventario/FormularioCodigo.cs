@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace CodigoInventario
 {
@@ -29,38 +30,49 @@ namespace CodigoInventario
                 MessageBox.Show("Tienes que ingresar un código.");
                 return;
             }
-            string connStr = "Data Source=192.168.220.241;Initial Catalog=INTELAF BODEGA;User ID=sa;Password=Intelaf1;";
-            using (SqlConnection conn = new SqlConnection(connStr))
+
+            string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["ConexionPrueba"].ConnectionString;
+
+            try
             {
-                string query = @"SELECT 
-                            p.CODIGO_PROVEEDOR,
-                            p.CODIGO,
-                            sa.SN
-                         FROM PROVAINT p
-                         INNER JOIN SN_APROV sa ON p.PROVPDCOD = sa.PROVPDCOD
-                         WHERE p.CODIGO = @Codigo";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
-                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+                    string query = @"SELECT 
+                                p.CODIGO_PROVEEDOR,
+                                p.CODIGO,
+                                sa.SN
+                             FROM PROVAINT p
+                             INNER JOIN SN_APROV sa ON p.PROVPDCOD = sa.PROVPDCOD
+                             WHERE p.CODIGO = @Codigo";
 
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        bool existe = false;
-                        while (reader.Read())
+                        cmd.Parameters.AddWithValue("@Codigo", codigo);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            existe = true;
-                            string item = $"{reader["CODIGO"]} -- {reader["CODIGO_PROVEEDOR"]} -- {reader["SN"]}";
-                            lstSerie.Items.Add(item);
-                        }
-                        if (!existe)
-                        {
-                            MessageBox.Show("El código que ingreso no existe.");
+                            bool existe = false;
+                            while (reader.Read())
+                            {
+                                existe = true;
+                                string item = $"{reader["CODIGO"]} -- {reader["CODIGO_PROVEEDOR"]} -- {reader["SN"]}";
+                                lstSerie.Items.Add(item);
+                            }
+                            if (!existe)
+                            {
+                                MessageBox.Show("El código que ingresó no existe.");
+                            }
                         }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+            }
         }
     }
 }
+        
+    
