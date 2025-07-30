@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.FormularioCodigo.resources
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.Properties.Resources.resources
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\bin\Debug\CodigoInventario.exe.config
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\bin\Debug\CodigoInventario.exe
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\bin\Debug\CodigoInventario.pdb
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.exe
+C:\Users\Usuario\source\repos\EMPRESA\CodigoInventario\obj\Debug\CodigoInventario.pdb

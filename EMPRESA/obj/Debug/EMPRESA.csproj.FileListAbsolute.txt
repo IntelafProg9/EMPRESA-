@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.Facturas.resources
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.Properties.Resources.resources
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\bin\Debug\EMPRESA.exe.config
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\bin\Debug\EMPRESA.exe
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\bin\Debug\EMPRESA.pdb
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.exe
+C:\Users\Usuario\source\repos\EMPRESA\EMPRESA\obj\Debug\EMPRESA.pdb
